@@ -20,21 +20,21 @@ public class Main {
 
         //Group Employee by City
 
-        /*Map<String, List<Employee>> cityEmpMap = empList.stream().collect(Collectors.groupingBy(Employee::getCity));
+        Map<String, List<Employee>> cityEmpMap = empList.stream().collect(Collectors.groupingBy(Employee::getCity));
         System.out.println("Employees grouped by city :: \n" + cityEmpMap);
 
         Map<String, List<Employee>> deptEmpMap = empList.stream().collect(Collectors.groupingBy(Employee::getDeptName));
         System.out.println("Employees grouped by dept :: \n" + deptEmpMap);
 
         Set<String> cities = empList.stream().map(it->it.getCity()).collect(Collectors.toSet());
-        System.out.println("City Set :: \n" + cities);*/
+        System.out.println("City Set :: \n" + cities);
 
 
         //boolean b = empList.stream().map(it->it.getSalary()).red
 
         List<Integer> numbers = Arrays.asList( 2,1, 3, 4, 5, 6);
         //filter even numbers
-        /*List<Integer> evenNums = numbers.stream().filter(n -> n % 2 == 0).collect(Collectors.toList());
+        List<Integer> evenNums = numbers.stream().filter(n -> n % 2 == 0).collect(Collectors.toList());
         System.out.println(evenNums);
         int n = numbers.stream().max(Integer::compareTo).orElse(-1);
         System.out.println(n);
@@ -43,7 +43,7 @@ public class Main {
         System.out.println(sortedList);
 
         List<Integer> newSortedList = numbers.stream().sorted(Comparator.reverseOrder()).toList();
-        System.out.println(newSortedList);*/
+        System.out.println(newSortedList);
         String [] arr = {"Object","data","Test","java","string","desktop","Java"};
         Test test = (intStrs) -> {
             StringBuilder stringBuilder = new StringBuilder();
@@ -56,8 +56,8 @@ public class Main {
 
       //  test.test(arr);
 
-       /* Map<String, Integer> hMap = Arrays.stream(arr).collect(Collectors.toMap(t->t, t->t.length()));
-        System.out.println(hMap.toString());*/
+        Map<String, Integer> hMap = Arrays.stream(arr).collect(Collectors.toMap(t->t, t->t.length()));
+        System.out.println(hMap.toString());
 
         Set<Integer> sqNUms = numbers.stream().map(t->t*t).collect(Collectors.toSet());
         System.out.println("sqNUms: "+sqNUms);
